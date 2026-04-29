@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psicanálise — Inconsciente em Foco</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="logo">
+        <span class="logo-symbol">Ψ</span>
+        <span class="logo-text">Inconsciente em Foco</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#temas">Temas</a></li>
+        <li><a href="#artigos">Artigos</a></li>
+        <li><a href="#canal">Canal</a></li>
+        <li><a href="#contato" class="btn-nav">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg">
+      <div class="ink-blob blob-1"></div>
+      <div class="ink-blob blob-2"></div>
+      <div class="ink-blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Canal de Psicanálise</p>
+      <h1 class="hero-title">
+        O que vive em você<br />
+        <em>sem que você saiba</em>
+      </h1>
+      <p class="hero-subtitle">
+        Conteúdo sobre psicanálise, inconsciente, subjetividade e a escuta que transforma.
+        Explorando Freud, Lacan e o pensamento psicanalítico contemporâneo.
+      </p>
+      <div class="hero-actions">
+        <a href="#canal" class="btn btn-primary">Assistir ao Canal</a>
+        <a href="#sobre" class="btn btn-ghost">Conhecer mais</a>
+      </div>
+    </div>
+    <div class="hero-quote">
+      <blockquote>
+        "O sonho é a via régia para o inconsciente."
+        <cite>— Sigmund Freud</cite>
+      </blockquote>
+    </div>
+    <div class="scroll-indicator">
+      <span>Role para explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual">
+          <div class="sobre-card">
+            <div class="sobre-symbol">Ψ</div>
+            <div class="sobre-stats">
+              <div class="stat">
+                <strong>+120</strong>
+                <span>Vídeos publicados</span>
+              </div>
+              <div class="stat">
+                <strong>+50k</strong>
+                <span>Seguidores</span>
+              </div>
+              <div class="stat">
+                <strong>5 anos</strong>
+                <span>Divulgando psicanálise</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-texto">
+          <p class="section-label">Sobre o Canal</p>
+          <h2 class="section-title">Uma escuta diferente para o mundo contemporâneo</h2>
+          <p>
+            Este canal nasceu da convicção de que a psicanálise tem muito a dizer sobre o tempo em que vivemos —
+            sobre o sofrimento, o desejo, os laços que formamos e os que se desfazem.
+          </p>
+          <p>
+            Aqui você encontra conteúdo rigoroso e acessível, que parte dos grandes textos de Freud e Lacan
+            para iluminar questões do cotidiano: relacionamentos, trabalho, identidade, sintomas e a busca por sentido.
+          </p>
+          <p>
+            Sem reducionismos, sem autoajuda disfarçada. Psicanálise de verdade.
+          </p>
+          <a href="#canal" class="btn btn-primary">Ver o canal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMAS -->
+  <section id="temas" class="temas">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">O que você vai encontrar</p>
+        <h2 class="section-title">Temas que atravessam o canal</h2>
+      </div>
+      <div class="temas-grid">
+        <div class="tema-card" data-index="01">
+          <div class="tema-icon">🧠</div>
+          <h3>Inconsciente</h3>
+          <p>O que Freud descobriu e por que isso ainda nos interpela. A dimensão do sujeito que fala sem saber.</p>
+        </div>
+        <div class="tema-card" data-index="02">
+          <div class="tema-icon">💭</div>
+          <h3>Sonhos e Sintomas</h3>
+          <p>Como o inconsciente se manifesta na vida cotidiana — nos sonhos, atos falhos e sintomas corporais.</p>
+        </div>
+        <div class="tema-card" data-index="03">
+          <div class="tema-icon">❤️</div>
+          <h3>Amor e Desejo</h3>
+          <p>Psicanálise do amor: transferência, idealização, repetição e o que nos faz escolher quem escolhemos.</p>
+        </div>
+        <div class="tema-card" data-index="04">
+          <div class="tema-icon">👁️</div>
+          <h3>Lacan</h3>
+          <p>Introdução ao pensamento lacaniano: o Real, o Simbólico, o Imaginário e a estrutura do sujeito.</p>
+        </div>
+        <div class="tema-card" data-index="05">
+          <div class="tema-icon">🪞</div>
+          <h3>Identidade e Sujeito</h3>
+          <p>Quem sou eu? A psicanálise e as questões sobre identidade, gênero, corpo e subjetividade.</p>
+        </div>
+        <div class="tema-card" data-index="06">
+          <div class="tema-icon">🌐</div>
+          <h3>Psicanálise e Cultura</h3>
+          <p>Como a psicanálise lê a sociedade, as redes sociais, a política e os laços coletivos contemporâneos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTIGOS -->
+  <section id="artigos" class="artigos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Leitura</p>
+        <h2 class="section-title">Artigos em destaque</h2>
+      </div>
+      <div class="artigos-grid">
+        <article class="artigo-card artigo-destaque">
+          <div class="artigo-tag">Inconsciente</div>
+          <h3>O inconsciente não é o subconsciente: por que essa distinção importa</h3>
+          <p>Uma das confusões mais comuns na divulgação da psicanálise. Entenda a diferença e o que ela revela sobre o sujeito.</p>
+          <a href="#" class="artigo-link">Ler artigo →</a>
+        </article>
+        <article class="artigo-card">
+          <div class="artigo-tag">Freud</div>
+          <h3>Por onde começar a ler Freud?</h3>
+          <p>Um guia para quem quer entrar no pensamento freudiano sem se perder nos primeiros textos.</p>
+          <a href="#" class="artigo-link">Ler artigo →</a>
+        </article>
+        <article class="artigo-card">
+          <div class="artigo-tag">Clínica</div>
+          <h3>O que acontece numa análise?</h3>
+          <p>A regra fundamental, a transferência, o analista como sujeito suposto saber.</p>
+          <a href="#" class="artigo-link">Ler artigo →</a>
+        </article>
+        <article class="artigo-card">
+          <div class="artigo-tag">Lacan</div>
+          <h3>A falta como estrutura: uma introdução ao Lacan</h3>
+          <p>Por que Lacan diz que o sujeito é falta-a-ser e o que isso significa para o desejo humano.</p>
+          <a href="#" class="artigo-link">Ler artigo →</a>
+        </article>
+        <article class="artigo-card">
+          <div class="artigo-tag">Cultura</div>
+          <h3>Ansiedade na era das redes sociais: uma leitura psicanalítica</h3>
+          <p>O que a psicanálise tem a dizer sobre o mal-estar digital e a compulsão por aprovação.</p>
+          <a href="#" class="artigo-link">Ler artigo →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANAL / CTA -->
+  <section id="canal" class="canal">
+    <div class="container">
+      <div class="canal-inner">
+        <div class="canal-texto">
+          <p class="section-label">Acompanhe</p>
+          <h2 class="section-title">Novos vídeos toda semana</h2>
+          <p>
+            Inscreva-se no canal e receba conteúdo aprofundado sobre psicanálise, sempre com rigor teórico
+            e linguagem acessível. Ative as notificações para não perder nenhum episódio.
+          </p>
+          <div class="canal-actions">
+            <a href="#" class="btn btn-primary btn-youtube">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+              </svg>
+              Inscrever-se no Canal
+            </a>
+            <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+          </div>
+        </div>
+        <div class="canal-visual">
+          <div class="video-placeholder">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <p>Último vídeo publicado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITAÇÃO -->
+  <section class="citacao-section">
+    <div class="container">
+      <div class="citacao-wrapper">
+        <blockquote class="grande-citacao">
+          <p>"A questão não é o que você fez com o que fizeram de você,<br/>mas o que você faz com o que fizeram de você."</p>
+          <cite>— Jean-Paul Sartre, relido pela psicanálise existencial</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-texto">
+          <p class="section-label">Fale conosco</p>
+          <h2 class="section-title">Tem uma sugestão de tema?</h2>
+          <p>Sugira temas para próximos vídeos, envie dúvidas sobre psicanálise ou entre em contato para parcerias e palestras.</p>
+          <div class="contato-info">
+            <div class="contato-item">
+              <span class="contato-icon">✉</span>
+              <span>contato@inconscienteemfoco.com.br</span>
+            </div>
+            <div class="contato-item">
+              <span class="contato-icon">📍</span>
+              <span>São Paulo, Brasil</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Spotify">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="contato-form-wrapper">
+          <form class="contato-form" id="contatoForm">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto">
+                <option value="">Selecione...</option>
+                <option value="sugestao">Sugestão de tema</option>
+                <option value="duvida">Dúvida sobre psicanálise</option>
+                <option value="parceria">Parceria / Palestra</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva aqui..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Enviar mensagem</button>
+            <div class="form-success" id="formSuccess">
+              Mensagem enviada! Obrigado pelo contato.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">
+            <span class="logo-symbol">Ψ</span>
+            <span class="logo-text">Inconsciente em Foco</span>
+          </a>
+          <p>Psicanálise com rigor e acessibilidade.</p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#temas">Temas</a></li>
+            <li><a href="#artigos">Artigos</a></li>
+            <li><a href="#canal">Canal</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Inconsciente em Foco. Todos os direitos reservados.</p>
+        <p class="footer-freud">"Onde era o Id, deve advir o Ego." — Freud</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
