@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artigos — Inconsciente em Foco</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="page-article">
+
+  <!-- NAVEGAÇÃO -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol">Ψ</span>
+        <span class="logo-text">Inconsciente em Foco</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#temas">Temas</a></li>
+        <li><a href="artigos.html" class="active">Artigos</a></li>
+        <li><a href="index.html#canal">Canal</a></li>
+        <li><a href="index.html#contato" class="btn-nav">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="artigos-page-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Leitura</p>
+      <h1 class="artigos-page-title">Artigos sobre<br /><em style="color: var(--gold); font-style: italic;">Psicanálise</em></h1>
+      <p class="artigos-page-sub">
+        Textos aprofundados sobre Freud, Lacan e o pensamento psicanalítico contemporâneo.
+        Escritos com rigor teórico e linguagem acessível.
+      </p>
+    </div>
+  </section>
+
+  <!-- ARTIGOS -->
+  <section class="artigos-page-content">
+    <div class="container">
+
+      <!-- Filtros -->
+      <div class="filter-bar">
+        <span class="filter-label">Filtrar por:</span>
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="inconsciente">Inconsciente</button>
+        <button class="filter-btn" data-filter="freud">Freud</button>
+        <button class="filter-btn" data-filter="lacan">Lacan</button>
+        <button class="filter-btn" data-filter="clinica">Clínica</button>
+        <button class="filter-btn" data-filter="cultura">Cultura</button>
+      </div>
+
+      <!-- Grid de artigos -->
+      <div class="artigos-full-grid" id="artigosGrid">
+
+        <article class="artigo-full-card" data-category="inconsciente">
+          <div class="artigo-tag">Inconsciente</div>
+          <h3>O inconsciente não é o subconsciente: por que essa distinção importa</h3>
+          <p>Uma das confusões mais comuns na divulgação da psicanálise. Entenda a diferença e o que ela revela sobre o sujeito.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Maio 2026</span>
+            <a href="artigo-inconsciente-subconsciente.html" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="freud">
+          <div class="artigo-tag">Freud</div>
+          <h3>Por onde começar a ler Freud?</h3>
+          <p>Um guia para quem quer entrar no pensamento freudiano sem se perder nos primeiros textos.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Abril 2026</span>
+            <a href="artigo-como-ler-freud.html" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="clinica">
+          <div class="artigo-tag">Clínica</div>
+          <h3>O que acontece numa análise?</h3>
+          <p>A regra fundamental, a transferência, o analista como sujeito suposto saber.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Março 2026</span>
+            <a href="artigo-o-que-acontece-numa-analise.html" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="lacan">
+          <div class="artigo-tag">Lacan</div>
+          <h3>A falta como estrutura: uma introdução ao Lacan</h3>
+          <p>Por que Lacan diz que o sujeito é falta-a-ser e o que isso significa para o desejo humano.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Fevereiro 2026</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="cultura">
+          <div class="artigo-tag">Cultura</div>
+          <h3>Ansiedade na era das redes sociais: uma leitura psicanalítica</h3>
+          <p>O que a psicanálise tem a dizer sobre o mal-estar digital e a compulsão por aprovação.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Janeiro 2026</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="freud">
+          <div class="artigo-tag">Freud</div>
+          <h3>O Complexo de Édipo revisitado: estrutura ou mito?</h3>
+          <p>Uma leitura contemporânea do conceito central da psicanálise freudiana e suas implicações clínicas e culturais.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Dezembro 2025</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="inconsciente">
+          <div class="artigo-tag">Inconsciente</div>
+          <h3>Atos falhos: quando o inconsciente fala sem querer</h3>
+          <p>Freud nos mostrou que os lapsos de língua, os esquecimentos e os acidentes revelam o que não conseguimos dizer.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Novembro 2025</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="lacan">
+          <div class="artigo-tag">Lacan</div>
+          <h3>O estádio do espelho e a formação do eu</h3>
+          <p>Como a experiência de se ver num espelho constitui o eu imaginário e o que isso tem a ver com o narcisismo.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Outubro 2025</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="clinica">
+          <div class="artigo-tag">Clínica</div>
+          <h3>Transferência: por que amamos (e odiamos) o analista</h3>
+          <p>O fenômeno da transferência é o motor de toda análise. Entender seu mecanismo é entender o que move o tratamento.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Setembro 2025</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="cultura">
+          <div class="artigo-tag">Cultura</div>
+          <h3>Psicanálise e política: o que Freud pensava sobre as massas</h3>
+          <p>Em "Psicologia das Massas e Análise do Eu", Freud oferece uma teoria do comportamento coletivo que nunca foi tão atual.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Agosto 2025</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="freud">
+          <div class="artigo-tag">Freud</div>
+          <h3>A pulsão de morte: Freud e o além do princípio do prazer</h3>
+          <p>Um dos conceitos mais polêmicos da teoria freudiana. O que Freud quis dizer e por que ele mudou sua teoria das pulsões.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Julho 2025</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="artigo-full-card" data-category="inconsciente">
+          <div class="artigo-tag">Inconsciente</div>
+          <h3>A interpretação dos sonhos: um guia para iniciantes</h3>
+          <p>Por que os sonhos importam para a psicanálise e como Freud propôs que eles fossem interpretados.</p>
+          <div class="artigo-footer">
+            <span class="artigo-date">Junho 2025</span>
+            <a href="#" class="artigo-link">Ler artigo →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-symbol">Ψ</span>
+            <span class="logo-text">Inconsciente em Foco</span>
+          </a>
+          <p>Psicanálise com rigor e acessibilidade.</p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#temas">Temas</a></li>
+            <li><a href="artigos.html">Artigos</a></li>
+            <li><a href="index.html#canal">Canal</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Inconsciente em Foco. Todos os direitos reservados.</p>
+        <p class="footer-freud">"Onde era o Id, deve advir o Ego." — Freud</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.artigo-full-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'todos' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Scroll reveal for cards
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach((card, i) => {
+      card.classList.add('reveal');
+      card.dataset.delay = i * 60;
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
