@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Conflito à Conexão | Mentoria para Casais</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --ink:#1A1628;
+  --purple:#2B1D5E;
+  --purple-mid:#432D8E;
+  --purple-light:#EDE9F8;
+  --sage:#4A7263;
+  --sage-light:#E6EFEB;
+  --clay:#B97355;
+  --clay-light:#F5EDE7;
+  --cream:#F7F4EF;
+  --white:#FFFFFF;
+  --muted:#6B6679;
+  --border:#E2DDD6;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.7;font-size:16px;}
+
+/* NAV */
+nav{
+  padding:1.1rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--cream);
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:100;
+}
+.nav-brand{font-family:var(--serif);font-size:1rem;color:var(--purple);text-decoration:none;font-weight:600;}
+.nav-sub{font-size:0.72rem;color:var(--muted);display:block;margin-top:1px;}
+.nav-cta{
+  background:var(--purple);color:white;
+  padding:0.55rem 1.4rem;border-radius:6px;
+  font-size:0.82rem;font-weight:500;
+  text-decoration:none;border:none;cursor:pointer;font-family:var(--sans);
+}
+
+/* HERO */
+.hero{
+  max-width:820px;margin:0 auto;
+  padding:5rem 2rem 4.5rem;
+  text-align:center;
+}
+.eyebrow{
+  display:inline-block;
+  background:var(--purple-light);color:var(--purple);
+  font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
+  padding:5px 16px;border-radius:99px;margin-bottom:2rem;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(2rem,5vw,3.4rem);
+  font-weight:600;line-height:1.2;
+  color:var(--purple);margin-bottom:1.5rem;
+}
+.hero h1 em{font-style:italic;color:var(--clay);}
+.hero-sub{
+  font-size:1.05rem;color:var(--muted);
+  max-width:560px;margin:0 auto 2.75rem;line-height:1.8;
+}
+.btn-primary{
+  display:inline-block;
+  background:var(--purple);color:white;
+  padding:1rem 2.75rem;border-radius:8px;
+  font-size:0.97rem;font-weight:500;
+  text-decoration:none;border:none;cursor:pointer;font-family:var(--sans);
+}
+.btn-primary:hover{background:var(--purple-mid);}
+.hero-note{font-size:0.78rem;color:var(--muted);margin-top:0.85rem;display:block;}
+.trust-row{
+  display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;
+  margin-top:3.5rem;padding-top:2.5rem;
+  border-top:1px solid var(--border);
+}
+.trust-item{text-align:center;}
+.trust-val{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--purple);display:block;line-height:1;}
+.trust-label{font-size:0.77rem;color:var(--muted);margin-top:4px;display:block;}
+
+/* SECTION BASE */
+section{padding:5rem 2rem;}
+.container{max-width:820px;margin:0 auto;}
+.section-eyebrow{
+  font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--clay);margin-bottom:0.75rem;display:block;
+}
+.section-title{
+  font-family:var(--serif);
+  font-size:clamp(1.55rem,3.5vw,2.25rem);
+  font-weight:600;color:var(--purple);
+  line-height:1.25;margin-bottom:1.1rem;
+}
+.section-body{font-size:1rem;color:var(--muted);max-width:600px;line-height:1.8;}
+
+/* PROBLEMA */
+.problema{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.pain-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1.25rem;margin-top:2.75rem;
+}
+.pain-card{
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:12px;padding:1.4rem;
+}
+.pain-icon{font-size:1.5rem;margin-bottom:0.75rem;display:block;}
+.pain-title{font-family:var(--serif);font-size:0.97rem;font-weight:600;color:var(--ink);margin-bottom:0.4rem;}
+.pain-desc{font-size:0.87rem;color:var(--muted);line-height:1.65;}
+
+/* DARK SECTION */
+.dark-section{background:var(--purple);padding:5rem 2rem;}
+.dark-section .section-title{color:white;}
+.dark-section .section-body{color:rgba(255,255,255,0.72);max-width:640px;}
+.dark-section .section-eyebrow{color:var(--clay);}
+.dark-section p{color:rgba(255,255,255,0.72);line-height:1.8;}
+.dark-quote{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(1.3rem,3vw,1.8rem);
+  color:white;line-height:1.4;
+  border-left:3px solid var(--clay);
+  padding-left:1.5rem;margin:2.5rem 0;
+  max-width:620px;
+}
+
+/* PILARES */
+.pilares-section{background:var(--cream);}
+.pillar-list{margin-top:2.75rem;display:flex;flex-direction:column;gap:1rem;}
+.pillar-item{
+  display:flex;gap:1.5rem;align-items:flex-start;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:12px;padding:1.4rem 1.5rem;
+}
+.pillar-num{
+  min-width:38px;height:38px;
+  background:var(--purple-light);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:0.85rem;font-weight:600;color:var(--purple);flex-shrink:0;
+}
+.pillar-content h3{
+  font-family:var(--serif);font-size:1rem;font-weight:600;
+  color:var(--ink);margin-bottom:0.35rem;
+}
+.pillar-content p{font-size:0.88rem;color:var(--muted);line-height:1.7;}
+.pillar-tag{
+  display:inline-block;margin-top:0.5rem;
+  font-size:0.72rem;color:var(--sage);background:var(--sage-light);
+  padding:2px 10px;border-radius:99px;
+}
+
+/* PARA QUEM */
+.para-quem{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.eli-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.75rem;margin-top:2.75rem;}
+.eli-box{border-radius:12px;padding:1.6rem;}
+.eli-box.yes{background:var(--sage-light);border:1px solid #b8d4c5;}
+.eli-box.no{background:var(--clay-light);border:1px solid #dbbfb0;}
+.eli-box h3{
+  font-family:var(--serif);font-size:0.97rem;font-weight:600;
+  margin-bottom:1rem;display:flex;align-items:center;gap:8px;
+}
+.eli-box.yes h3{color:var(--sage);}
+.eli-box.no h3{color:var(--clay);}
+.eli-box ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.eli-box ul li{
+  font-size:0.88rem;color:var(--muted);
+  display:flex;gap:8px;align-items:flex-start;line-height:1.55;
+}
+.dot{min-width:6px;height:6px;border-radius:50%;margin-top:6px;flex-shrink:0;}
+.dot.green{background:var(--sage);}
+.dot.clay{background:var(--clay);}
+
+/* COMO FUNCIONA */
+.como-funciona{background:var(--cream);}
+.steps-list{margin-top:2.75rem;display:flex;flex-direction:column;gap:0;}
+.step-item{
+  display:flex;gap:1.5rem;padding:1.5rem 0;
+  border-bottom:1px solid var(--border);
+}
+.step-item:last-child{border-bottom:none;}
+.step-line{display:flex;flex-direction:column;align-items:center;}
+.step-circle{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--purple);color:white;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.82rem;font-weight:500;flex-shrink:0;
+}
+.step-connector{flex:1;width:1px;background:var(--border);margin:4px 0;}
+.step-item:last-child .step-connector{display:none;}
+.step-content{padding-top:4px;}
+.step-content h3{
+  font-family:var(--serif);font-size:1rem;font-weight:600;
+  color:var(--ink);margin-bottom:0.35rem;
+}
+.step-content p{font-size:0.88rem;color:var(--muted);line-height:1.7;max-width:580px;}
+.step-badge{
+  display:inline-block;margin-top:0.5rem;
+  font-size:0.72rem;color:var(--purple);background:var(--purple-light);
+  padding:2px 10px;border-radius:99px;
+}
+
+/* INVESTIMENTO */
+.investimento{background:var(--white);border-top:1px solid var(--border);}
+.price-wrap{max-width:500px;margin:2.75rem auto 0;}
+.price-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:16px;overflow:hidden;
+}
+.price-head{
+  background:var(--purple);color:white;
+  padding:2rem;text-align:center;
+}
+.price-head h3{font-family:var(--serif);font-size:1.05rem;font-weight:500;margin-bottom:0.75rem;}
+.price-amount{font-family:var(--serif);font-size:3rem;font-weight:700;display:block;line-height:1;}
+.price-period{font-size:0.82rem;color:rgba(255,255,255,0.65);margin-top:0.4rem;}
+.price-body{padding:1.75rem 2rem;}
+.price-list{list-style:none;display:flex;flex-direction:column;gap:0.75rem;}
+.price-list li{
+  font-size:0.9rem;color:var(--muted);
+  display:flex;gap:10px;align-items:flex-start;line-height:1.5;
+}
+.check{color:var(--sage);font-weight:600;flex-shrink:0;}
+.price-foot{padding:0 2rem 2rem;}
+.price-foot button{
+  width:100%;background:var(--purple);color:white;
+  border:none;padding:1rem;border-radius:8px;
+  font-size:0.97rem;font-weight:500;cursor:pointer;font-family:var(--sans);
+}
+.price-foot button:hover{background:var(--purple-mid);}
+.price-guarantee{text-align:center;font-size:0.78rem;color:var(--muted);margin-top:0.75rem;}
+
+/* FAQ */
+.faq-section{background:var(--cream);border-top:1px solid var(--border);}
+.faq-list{margin-top:2.75rem;display:flex;flex-direction:column;gap:1rem;}
+.faq-item{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:10px;padding:1.4rem 1.5rem;
+}
+.faq-q{font-family:var(--serif);font-size:0.97rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;}
+.faq-a{font-size:0.87rem;color:var(--muted);line-height:1.7;}
+
+/* MENTOR */
+.mentor-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.mentor-card{
+  display:flex;gap:2.5rem;align-items:flex-start;
+  margin-top:2.75rem;
+  flex-wrap:wrap;
+}
+.mentor-avatar{
+  min-width:100px;width:100px;height:100px;border-radius:50%;
+  background:var(--purple-light);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--purple);flex-shrink:0;
+}
+.mentor-info h3{
+  font-family:var(--serif);font-size:1.2rem;font-weight:600;
+  color:var(--ink);margin-bottom:0.25rem;
+}
+.mentor-role{font-size:0.82rem;color:var(--clay);margin-bottom:1rem;display:block;}
+.mentor-bio{font-size:0.9rem;color:var(--muted);line-height:1.75;max-width:560px;}
+.mentor-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem;}
+.mentor-tag{
+  font-size:0.72rem;color:var(--purple);background:var(--purple-light);
+  padding:3px 12px;border-radius:99px;
+}
+
+/* CTA FINAL */
+.cta-final{
+  background:var(--purple);
+  text-align:center;padding:5rem 2rem;
+}
+.cta-final h2{
+  font-family:var(--serif);
+  font-size:clamp(1.7rem,4vw,2.6rem);
+  font-weight:600;color:white;
+  margin-bottom:1.1rem;line-height:1.25;
+}
+.cta-final p{
+  color:rgba(255,255,255,0.7);
+  max-width:480px;margin:0 auto 2.5rem;
+  font-size:0.97rem;line-height:1.75;
+}
+.btn-clay{
+  display:inline-block;
+  background:var(--clay);color:white;
+  padding:1.1rem 2.75rem;border-radius:8px;
+  font-size:1rem;font-weight:500;
+  text-decoration:none;border:none;cursor:pointer;font-family:var(--sans);
+}
+.cta-note{font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:1rem;display:block;}
+
+/* FOOTER */
+footer{
+  background:var(--ink);color:rgba(255,255,255,0.4);
+  text-align:center;padding:1.5rem 2rem;font-size:0.78rem;
+}
+
+@media(max-width:600px){
+  nav{padding:1rem 1.25rem;}
+  .hero{padding:3.5rem 1.25rem 3rem;}
+  section{padding:3.5rem 1.25rem;}
+  .trust-row{gap:1.75rem;}
+  .pillar-item{flex-direction:column;gap:0.75rem;}
+  .step-item{flex-direction:column;gap:0.75rem;}
+  .mentor-card{flex-direction:column;}
+  .dark-section{padding:3.5rem 1.25rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    De Conflito à Conexão
+    <span class="nav-sub">Mentoria para casais</span>
+  </a>
+  <a href="#investimento" class="nav-cta">Quero participar</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="eyebrow">Mentoria Intensiva de 3 Meses</span>
+  <h1>Seu casamento está preso<br>no mesmo ciclo de conflitos?</h1>
+  <p class="hero-sub">
+    A mentoria <em style="font-style:italic;color:var(--clay);">De Conflito à Conexão</em> é o acompanhamento direto e pessoal de 90 dias que transforma a forma como você e seu parceiro se comunicam, compreendem e reconectam.
+  </p>
+  <a href="#investimento" class="btn-primary">Quero conhecer a mentoria</a>
+  <span class="hero-note">Vagas limitadas. Início mediante diagnóstico relacional gratuito.</span>
+
+  <div class="trust-row">
+    <div class="trust-item">
+      <span class="trust-val">90</span>
+      <span class="trust-label">dias de acompanhamento<br>direto e personalizado</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-val">6</span>
+      <span class="trust-label">sessões individuais<br>de 50 minutos</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-val">5×</span>
+      <span class="trust-label">dias por semana<br>de suporte VIP</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-val">100%</span>
+      <span class="trust-label">personalizado para<br>o perfil do seu casal</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="problema">
+  <div class="container">
+    <span class="section-eyebrow">O problema que ninguém nomeia</span>
+    <h2 class="section-title">Você reconhece algum desses padrões no seu relacionamento?</h2>
+    <p class="section-body">Casais entre 30 e 45 anos frequentemente chegam ao mesmo impasse. As discussões mudam de assunto, mas o padrão se repete. E o silêncio que vem depois é cada vez mais longo.</p>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <span class="pain-icon">🔁</span>
+        <p class="pain-title">O mesmo conflito que nunca termina</p>
+        <p class="pain-desc">Vocês discutem, aparentemente resolvem, e semanas depois o mesmo tema ressurge. A sensação é de que nunca chegam de fato a um lugar diferente.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🧱</span>
+        <p class="pain-title">Distância emocional crescente</p>
+        <p class="pain-desc">A rotina criou um muro invisível entre vocês. Há convivência, mas não há conexão real. Você se sente só mesmo estando junto.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">💬</span>
+        <p class="pain-title">Comunicação que vira batalha</p>
+        <p class="pain-desc">Qualquer tentativa de falar sobre o que incomoda escala para acusações, defesas ou silêncio. A conversa nunca chega onde precisaria.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">⏳</span>
+        <p class="pain-title">Sensação de que o tempo está passando</p>
+        <p class="pain-desc">Você sabe que esse padrão não vai se resolver sozinho. Mas entre a rotina, os filhos e o trabalho, nunca parece o momento certo para buscar ajuda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK SECTION -->
+<section class="dark-section">
+  <div class="container">
+    <span class="section-eyebrow">A verdade sobre conflitos de casal</span>
+    <h2 class="section-title">Conflitos não resolvidos não desaparecem. Eles se aprofundam.</h2>
+    <blockquote class="dark-quote">
+      "O problema não é que vocês brigam. É que ninguém ensinou como sair do ciclo depois."
+    </blockquote>
+    <p>A maioria dos casais que chegam a um ponto crítico não chegou lá por falta de amor. Chegou por falta de ferramentas para processar o conflito sem destruir a conexão. A boa notícia é que esse padrão tem saída, e ela não exige anos de terapia nem afastamento. Exige acompanhamento certo, no momento certo, com método.</p>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section style="background:var(--cream);">
+  <div class="container">
+    <span class="section-eyebrow">A solução</span>
+    <h2 class="section-title">O que é a mentoria De Conflito à Conexão</h2>
+    <p class="section-body">
+      É um acompanhamento de 3 meses, direto e personalizado, desenhado para casais de 30 a 45 anos que querem transformar seus padrões de conflito sem abrir mão da profundidade e da intimidade que construíram ao longo dos anos. Não é terapia. Não é curso. É presença, método e resultado.
+    </p>
+  </div>
+</section>
+
+<!-- PILARES -->
+<section class="pilares-section" style="padding-top:0;">
+  <div class="container">
+    <span class="section-eyebrow">Os 5 pilares</span>
+    <h2 class="section-title">O que está incluído na mentoria</h2>
+
+    <div class="pillar-list">
+      <div class="pillar-item">
+        <div class="pillar-num">01</div>
+        <div class="pillar-content">
+          <h3>Diagnóstico Relacional Profundo</h3>
+          <p>Antes de qualquer sessão, você e seu parceiro passam por um mapeamento completo dos padrões de conflito, gatilhos recorrentes e estilos de comunicação. Tudo o que vier depois parte desse diagnóstico específico do seu casal, nunca de um roteiro genérico.</p>
+          <span class="pillar-tag">Realizado na semana de boas-vindas</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-num">02</div>
+        <div class="pillar-content">
+          <h3>Encontros Individuais a Cada 15 Dias (50 minutos)</h3>
+          <p>São 6 sessões ao longo de 3 meses, via videoconferência, com foco nas situações reais vividas entre os encontros. Cada sessão começa revisando o plano de ação e termina com micro-objetivos concretos para a próxima quinzena.</p>
+          <span class="pillar-tag">6 sessões ao longo de 90 dias</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-num">03</div>
+        <div class="pillar-content">
+          <h3>Suporte VIP pelo WhatsApp</h3>
+          <p>Acesso direto ao mentor 5 dias por semana para enviar áudios, tirar dúvidas e receber orientações rápidas entre as sessões. Você nunca estará sozinho quando o conflito surgir entre os encontros. Resposta garantida em até 24 horas úteis.</p>
+          <span class="pillar-tag">Segunda a sexta, resposta em até 24h</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-num">04</div>
+        <div class="pillar-content">
+          <h3>Ebook Exclusivo Gratuito: Mapa dos Conflitos</h3>
+          <p>Material prático entregue no primeiro acesso, com ferramentas de comunicação não violenta, identificação de ciclos de ruptura e exercícios para aplicar em casa entre as sessões. Ele é o manual de base que acompanha toda a jornada.</p>
+          <span class="pillar-tag">Liberado no primeiro acesso</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-num">05</div>
+        <div class="pillar-content">
+          <h3>Plano de Ação Personalizado de 90 Dias</h3>
+          <p>Roteiro criado especificamente para o perfil do seu casal, com metas, rituais semanais de reconexão e micro-exercícios práticos adaptados ao ritmo de vida de vocês. Atualizado após cada sessão, para que o plano evolua junto com o casal.</p>
+          <span class="pillar-tag">Atualizado após cada encontro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="como-funciona">
+  <div class="container">
+    <span class="section-eyebrow">Jornada dos 90 dias</span>
+    <h2 class="section-title">Como funciona na prática</h2>
+
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-line">
+          <div class="step-circle">1</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <h3>Diagnóstico e boas-vindas</h3>
+          <p>Logo após a inscrição, você recebe acesso ao formulário de diagnóstico relacional e ao ebook. O mentor analisa o mapeamento e prepara o plano de ação personalizado para o primeiro encontro.</p>
+          <span class="step-badge">Semana 1</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-line">
+          <div class="step-circle">2</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <h3>Primeira sessão e definição do plano</h3>
+          <p>No primeiro encontro, vocês apresentam as situações reais de conflito e o mentor apresenta o plano de 90 dias. O suporte VIP pelo WhatsApp é ativado a partir desse momento.</p>
+          <span class="step-badge">Semana 2</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-line">
+          <div class="step-circle">3</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <h3>Sessões quinzenais e suporte contínuo</h3>
+          <p>A cada 15 dias, uma nova sessão revisa o que foi aplicado, processa as situações que surgiram e atualiza o plano. O WhatsApp garante apoio entre os encontros, para que nenhum conflito fique sem resposta.</p>
+          <span class="step-badge">Semanas 3 a 10</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-line">
+          <div class="step-circle">4</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <h3>Sessão de encerramento e consolidação</h3>
+          <p>A última sessão é dedicada a consolidar as mudanças conquistadas, identificar os novos padrões instalados e criar um protocolo de manutenção para que o casal siga avançando de forma autônoma.</p>
+          <span class="step-badge">Semana 12</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="para-quem" id="para-quem">
+  <div class="container">
+    <span class="section-eyebrow">Elegibilidade</span>
+    <h2 class="section-title">Esta mentoria é para você?</h2>
+    <p class="section-body">A mentoria funciona para casais que estão prontos para agir, não apenas para refletir. Leia com atenção antes de se inscrever.</p>
+
+    <div class="eli-grid">
+      <div class="eli-box yes">
+        <h3><span style="font-size:1.1rem;">✓</span> Esta mentoria é para você se...</h3>
+        <ul>
+          <li><span class="dot green"></span>Você tem entre 30 e 45 anos e está em um relacionamento sério, casado ou em união estável.</li>
+          <li><span class="dot green"></span>Reconhece padrões recorrentes de conflito que vocês não conseguem resolver sozinhos.</li>
+          <li><span class="dot green"></span>Ambos os parceiros têm disponibilidade real e vontade de participar do processo.</li>
+          <li><span class="dot green"></span>Você busca clareza prática e ferramentas aplicáveis, não apenas autoconhecimento teórico.</li>
+          <li><span class="dot green"></span>Está disposto a realizar tarefas e micro-exercícios entre as sessões.</li>
+          <li><span class="dot green"></span>Quer preservar e aprofundar o relacionamento que já construiu.</li>
+        </ul>
+      </div>
+      <div class="eli-box no">
+        <h3><span style="font-size:1.1rem;">×</span> Esta mentoria não é adequada se...</h3>
+        <ul>
+          <li><span class="dot clay"></span>Há situações de violência física ou psicológica no relacionamento. Nesse caso, o suporte indicado é profissional clínico especializado.</li>
+          <li><span class="dot clay"></span>Apenas um dos parceiros quer participar. A mentoria exige comprometimento dos dois.</li>
+          <li><span class="dot clay"></span>Você está buscando uma decisão de separação, e não a transformação do relacionamento.</li>
+          <li><span class="dot clay"></span>Não há disponibilidade para as sessões quinzenais e para o suporte pelo WhatsApp.</li>
+          <li><span class="dot clay"></span>O relacionamento está em crise aguda recente, exigindo intervenção clínica imediata.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTOR -->
+<section class="mentor-section">
+  <div class="container">
+    <span class="section-eyebrow">Quem vai te acompanhar</span>
+    <h2 class="section-title">Seu mentor</h2>
+
+    <div class="mentor-card">
+      <div class="mentor-avatar">MA</div>
+      <div class="mentor-info">
+        <h3>Pr. Marcelo Andrade</h3>
+        <span class="mentor-role">Pastor, Filósofo e Psicanalista Clínico</span>
+        <p class="mentor-bio">
+          Com formação em teologia, filosofia e psicanálise clínica de orientação lacaniana e freudiana, Marcelo Andrade atua há anos na intersecção entre desenvolvimento humano, escuta clínica e acompanhamento pastoral. Seu trabalho integra rigor conceitual e presença humana, com um olhar formado por Freud, Lacan e a tradição reformada. Criador do canal Psiquê & Sentido, onde conecta psicanálise, filosofia e vida cotidiana para uma audiência de milhares de pessoas.
+        </p>
+        <div class="mentor-tags">
+          <span class="mentor-tag">Psicanalista Clínico</span>
+          <span class="mentor-tag">Teólogo</span>
+          <span class="mentor-tag">Filósofo</span>
+          <span class="mentor-tag">Psiquê & Sentido</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIMENTO -->
+<section class="investimento" id="investimento">
+  <div class="container">
+    <span class="section-eyebrow">Investimento</span>
+    <h2 class="section-title">Quanto custa a mentoria</h2>
+    <p class="section-body">Um investimento único em 90 dias de acompanhamento direto, personalizado e contínuo.</p>
+
+    <div class="price-wrap">
+      <div class="price-card">
+        <div class="price-head">
+          <h3>Mentoria De Conflito à Conexão</h3>
+          <span class="price-amount">R$ 997,99</span>
+          <p class="price-period">pagamento único ou em até 10x de R$ 99,80</p>
+        </div>
+        <div class="price-body">
+          <ul class="price-list">
+            <li><span class="check">✓</span> Diagnóstico relacional profundo (1ª semana)</li>
+            <li><span class="check">✓</span> 6 sessões individuais de 50 minutos (a cada 15 dias)</li>
+            <li><span class="check">✓</span> Suporte VIP pelo WhatsApp, 5 dias por semana</li>
+            <li><span class="check">✓</span> Ebook exclusivo gratuito: Mapa dos Conflitos</li>
+            <li><span class="check">✓</span> Plano de ação personalizado de 90 dias, atualizado a cada sessão</li>
+            <li><span class="check">✓</span> Gravação de todas as sessões para revisão posterior</li>
+            <li><span class="check">✓</span> Protocolo de manutenção entregue ao final</li>
+          </ul>
+        </div>
+        <div class="price-foot">
+          <button onclick="window.scrollTo({top:0,behavior:'smooth'})">Quero me inscrever agora</button>
+          <p class="price-guarantee">Vagas limitadas. Início mediante diagnóstico gratuito.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <span class="section-eyebrow">Dúvidas frequentes</span>
+    <h2 class="section-title">Perguntas que surgem antes de se inscrever</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Os dois precisam participar das sessões juntos?</p>
+        <p class="faq-a">As sessões são individuais, realizadas com o casal junto. O foco é a dinâmica relacional de vocês dois, portanto a presença de ambos é indispensável. Em alguns momentos, o mentor pode propor uma sessão de escuta individual com cada um, conforme a necessidade identificada no diagnóstico.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">A mentoria substitui a terapia?</p>
+        <p class="faq-a">Não. A mentoria é um acompanhamento prático e direcionado para padrões relacionais e comunicação. Casos que envolvam questões de saúde mental individual, traumas profundos ou necessidade de intervenção clínica são encaminhados ao profissional mais adequado. Mentoria e terapia podem coexistir e se complementar.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">E se um de nós não puder participar de alguma sessão?</p>
+        <p class="faq-a">As sessões podem ser remarcadas com até 48 horas de antecedência, dentro do período de 3 meses. O mentor manterá o suporte pelo WhatsApp e poderá indicar exercícios complementares para que o processo não perca ritmo.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">A mentoria funciona para casais com filhos pequenos e rotina intensa?</p>
+        <p class="faq-a">Sim. O modelo foi pensado justamente para casais na fase entre 30 e 45 anos, que frequentemente têm filhos, carreiras ativas e pouco tempo disponível. As sessões são online, os micro-exercícios são adaptados à rotina real do casal, e o suporte VIP existe exatamente para dar suporte nas frestas do dia a dia.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">O processo é sigiloso?</p>
+        <p class="faq-a">Completamente. Tudo o que é compartilhado nas sessões e pelo WhatsApp é tratado com absoluto sigilo. Nenhuma informação pessoal é utilizada fora do contexto da mentoria, e nenhum conteúdo é compartilhado com terceiros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container" style="max-width:640px;">
+    <h2>O próximo passo não é resolver o conflito.<br>É parar de conviver com ele.</h2>
+    <p>Se você chegou até aqui, é porque reconhece que algo precisa mudar. A mentoria De Conflito à Conexão existe para acompanhar exatamente esse movimento.</p>
+    <a href="#investimento" class="btn-clay">Quero me inscrever na mentoria</a>
+    <span class="cta-note">Vagas limitadas. Início mediante diagnóstico relacional gratuito.</span>
+  </div>
+</section>
+
+<footer>
+  <p>Mentoria De Conflito à Conexão &nbsp;|&nbsp; Pr. Marcelo Andrade &nbsp;|&nbsp; @andradepsi_filo</p>
+</footer>
+
+</body>
+</html>
